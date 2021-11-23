@@ -1,24 +1,24 @@
 <?php require_once "api/api.php"; ?>
-<html lang="en">
-<head>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>LOGIN PAGE</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <body>
-        <form method="POST" autocomplete="off">
+<html>
 
-            <div class="form-outline">
-                <br>
-                <input type="email" id="typeEmail" class="form-control" />
-                <label class="form-label" for="typeEmail">Email Here</label>
-                <input type="password" id="typePassword" class="form-control" />
-                <label class="form-label" for="typePassword">Password Here</label><br>
-                <input type ="submit"  class="btn btn-primary" name="print">
-            </div>
-        </form>
-    </body>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title>Sign in</title>
+</head>
+
+<body>
+  <div class="main">
+    <p class="sign" align="center">Sign in</p>
+    <form class="form1">
+      <input class="un " type="text" name="email" align="center" placeholder="Email">
+      <input class="pass" type="password" name="password" align="center" placeholder="Password">
+      <button class="submit" name="print" align="center">Sign in</button>
+      <p class="forgot" align="center"><a href="./forgotPassword.php"">Forgot Password?</p> 
+    </div>
+     
+</body>
+
 </html>
