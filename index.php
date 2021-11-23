@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <body>
     <form method="POST" autocomplete="off">
-
         <button type="submit" name="print" class="btn btn-primary">Add as Professor</button>
     </form>
     </body>
