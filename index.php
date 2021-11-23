@@ -17,7 +17,7 @@
                 <label class="form-label" for="typeEmail">Email Here</label>
                 <input type="password" id="typePassword" class="form-control" />
                 <label class="form-label" for="typePassword">Password Here</label><br>
-                <input type ="submit"  class="btn btn-primary" name="login">
+                <input type ="submit"  class="btn btn-primary" name="print">
             </div>
         </form>
     </body>
