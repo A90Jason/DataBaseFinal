@@ -1,4 +1,4 @@
-<?php require_once "./backend/api.php"; ?>
+<?php require_once "api/api.php"; ?>
 <html lang="en">
 <head>
     
@@ -9,8 +9,16 @@
     <title>LOGIN PAGE</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <body>
-    <form method="POST" autocomplete="off">
-        <button type="submit" name="print" class="btn btn-primary">Add as Professor</button>
-    </form>
+        <form method="POST" autocomplete="off">
+
+            <div class="form-outline">
+                <br>
+                <input type="email" id="typeEmail" class="form-control" />
+                <label class="form-label" for="typeEmail">Email Here</label>
+                <input type="password" id="typePassword" class="form-control" />
+                <label class="form-label" for="typePassword">Password Here</label><br>
+                <input type ="submit"  class="btn btn-primary" name="login">
+            </div>
+        </form>
     </body>
 </html>
