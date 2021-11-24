@@ -16,7 +16,7 @@
         <form class="form1">
             <input class="un" type="text" name="email" align="center" placeholder="Email">
             <button class="passwordButton" align="center">Reset Password</button>
-            <p class="forgot" align="center"><a href="./index.php"">Back To Login Page</p> 
+            <p class="link" align="center"><a href="./index.php"">Back To Login Page</p> 
     </div>
      
 </body>
