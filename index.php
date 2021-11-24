@@ -42,7 +42,6 @@ if (isset($_POST['reg_user'])) {
             <button class="submit" align="center" type="submit" name="reg_user">Sign Up</button>
             <p class="forgot" align="center"><a href="./forgotPassword.php"">Forgot Password?</p>
             <p class=" forgot" align="center"><a href="./login.php"">Login Here</p>  
-        </form>
     </div>
 </body>
 
