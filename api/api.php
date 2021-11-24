@@ -10,4 +10,3 @@ if(isset($_POST['print']))
                         values('name', 'email@server.com', 'pass', '0')";
     mysqli_query($con, $insert_data);
 }
-?>
