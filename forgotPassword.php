@@ -11,7 +11,7 @@
 
 <body>
   <div class="main">
-    <p class="sign" align="center">Forgot Passwsord</p>
+    <p class="sign" align="center">Forgot Password</p>
     <form class="form1">
       <input class="un" type="text" name="email" align="center" placeholder="Email">
       <button class="passwordButton" align="center">Reset Password</button>
