@@ -1,0 +1,6 @@
+{
+  "C_Cpp.updateChannel": "Insiders",
+  "git.enableSmartCommit": true,
+  "editor.defaultFormatter": "HookyQR.beautify",
+  "editor.formatOnSave": true
+}

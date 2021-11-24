@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="main">
+    <div class="forgotPassword">
         <p class="sign" align="center">Forgot Password</p>
         <form class="form1">
             <input class="un" type="text" name="email" align="center" placeholder="Email">

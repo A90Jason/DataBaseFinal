@@ -18,14 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <div class="main">
+    <div class="login">
         <p class="sign" align="center">Sign in</p>
-        <form class="form1" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <input class="un " type="text" name="email" align="center" placeholder="Email" <?php echo (!empty($email_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $email; ?>">
-            <span class="invalid-feedback"><?php echo $email_err; ?></span>
-            <input class="pass" type="password" name="password" align="center" placeholder="Password" <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
-            <span class="invalid-feedback"><?php echo $password_err; ?></span>
-            <button class="submit" align="center" value="Submit">Sign in</button>
+        <form class="form1" action='mainPage.php' metohd="post">
+        <input class="un " type="text" name="email" align="center" placeholder="Email">
+        <input class="pass" type="password" name="password" align="center" placeholder="Password">
+        <button class="submit" align="center" value="Submit">Sign in</button>
     </div>
 
 </body>
