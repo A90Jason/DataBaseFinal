@@ -1,57 +1,58 @@
 body {
-    background-color: #ffffff;
-    font-family: "Ubuntu", sans-serif;
-  }
+  background-color: #ffffff;
+  font-family: "Ubuntu", sans-serif;
+}
 
-  .sign {
-    padding-top: 40px;
-    color: #8c55aa;
-    font-family: "Ubuntu", sans-serif;
-    font-weight: bold;
-    font-size: 23px;
-  }
-  
-  .mainPageButtonsBody{
-    background-color: #ffffff;
-    font-family: "Ubuntu", sans-serif;
-    /* position: center; */
-    margin-left: 500px;
-  }
+.sign {
+  padding-top: 40px;
+  color: #8c55aa;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+}
 
-  .mainBox {
-    background-color: #ffffff;
-    width: 500px;
-    height: 500px;
-    margin: 7em auto;
-    border-radius: 1.5em;
-    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-  }
+.mainPageButtonsBody {
+  background-color: #ffffff;
+  font-family: "Ubuntu", sans-serif;
+  /* position: center; */
+  margin-left: 500px;
+}
+
+.mainBox {
+  background-color: #ffffff;
+  width: 500px;
+  height: 500px;
+  margin: 7em auto;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
 
 
 .mainPageButtons {
-    cursor: pointer;
-    border-radius: 5em;
-    color: #fff;
-    background: linear-gradient(to right, #9c27b0, #e040fb);
-    border: 0;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    font-family: "Ubuntu", sans-serif;
-    margin-left: 35%;
-    font-size: 13px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-  }
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient(to right, #9c27b0, #e040fb);
+  border: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-inline: 35%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 13px;
+  text-align: center;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
 
-  .divider{
-    width:5px;
-    height:auto;
-    display:inline-block;
-  }
+.divider {
+  width: 5px;
+  height: auto;
+  display: inline-block;
+}
 
-  @media (max-width: 600px) {
-    .main {
-      border-radius: 0px;
-    }
+@media (max-width: 600px) {
+  .main {
+    border-radius: 0px;
   }
+}
