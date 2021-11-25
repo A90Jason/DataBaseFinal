@@ -1,5 +1,10 @@
+<<<<<<< Updated upstream
 <?php
 require "api/connection.php";
+=======
+<?php 
+require_once "api/api.php";
+>>>>>>> Stashed changes
 
 // initializing variables
 $name = "";
@@ -17,10 +22,17 @@ if (isset($_POST['reg_user'])) {
         array_push($errors, "The two passwords do not match");
     }
 
+<<<<<<< Updated upstream
     $query = "INSERT INTO users (name, email, password) 
         VALUES('$name', '$email', '$password_1')";
     mysqli_query($con, $query);
     $_SESSION['email'] = $email;
+=======
+  $query = "INSERT INTO users(name, email, password, admin) 
+        VALUES('$name', '$email', '$password_1', '0')";
+   mysqli_query($con, $query);
+  $_SESSION['email'] = $email;
+>>>>>>> Stashed changes
 }
 ?>
 <html>
@@ -36,14 +48,20 @@ if (isset($_POST['reg_user'])) {
 <body>
     <div class="main">
         <p class="sign" align="center">Sign Up</p>
-        <form class="form1" action='login.php' method="post">
+        <form class="form1" method="post">
             <input class="un " type="text" name="name" align="center" placeholder="Name">
             <input class="un " type="text" name="email" align="center" placeholder="Email">
             <input class="pass" type="password" name="password_1" align="center" placeholder="Password">
             <input class="pass" type="password" name="password_2" align="center" placeholder="Confirm Password">
             <button class="submit" align="center" type="submit" name="reg_user">Sign Up</button>
+<<<<<<< Updated upstream
             <p class="link" align="center"><a href="./forgotPassword.php">Forgot Password?</p>
             <p class="link" align="center"><a href="./login.php">Login Here</p>
+=======
+            <p class="forgot" align="center"><a href="./forgotPassword.php"">Forgot Password?</p>
+            <p class="forgot" align="center"><a href="./login.php"">Login Here</p> 
+        </form>
+>>>>>>> Stashed changes
     </div>
 </body>
 
