@@ -1,13 +1,11 @@
-<?php 
+<?php
 require_once "api/api.php";
 
-// initializing variables
 $name = "";
 $email = "";
 $errors = array();
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
-    // receive all input values from the form
     $name = mysqli_real_escape_string($con, $_POST['name']);
     $email = mysqli_real_escape_string($con, $_POST['email']);
     $password_1 = mysqli_real_escape_string($con, $_POST['password_1']);
@@ -16,7 +14,6 @@ if (isset($_POST['reg_user'])) {
     if ($password_1 != $password_2) {
         array_push($errors, "The two passwords do not match");
     }
-
 
   $query = "INSERT INTO users(name, email, password, admin) 
         VALUES('$name', '$email', '$password_1', '0')";
@@ -38,8 +35,8 @@ if (isset($_POST['reg_user'])) {
 <body>
     <div class="main">
         <p class="sign" align="center">Sign Up</p>
-        <form class="form1" method="post">
-            <input class="un " type="text" name="name" align="center" placeholder="Name">
+        <form class="form1" action="mainPage.php" method="post">
+            <input class="un " type="text" name="name" align="center" placeholder="Username">
             <input class="un " type="text" name="email" align="center" placeholder="Email">
             <input class="pass" type="password" name="password_1" align="center" placeholder="Password">
             <input class="pass" type="password" name="password_2" align="center" placeholder="Confirm Password">
