@@ -17,8 +17,10 @@ if (isset($_POST['reg_user'])) {
         array_push($errors, "The two passwords do not match");
     }
 
+
   $query = "INSERT INTO users(name, email, password, admin) 
         VALUES('$name', '$email', '$password_1', '0')";
+  
    mysqli_query($con, $query);
   $_SESSION['email'] = $email;
 }
