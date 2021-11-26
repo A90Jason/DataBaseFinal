@@ -20,6 +20,8 @@ if (isset($_POST['reg_user'])) {
   
    mysqli_query($con, $query);
   $_SESSION['email'] = $email;
+
+  header("location: mainPage.php");
 }
 ?>
 <html>
@@ -35,7 +37,7 @@ if (isset($_POST['reg_user'])) {
 <body>
     <div class="main">
         <p class="sign" align="center">Sign Up</p>
-        <form class="form1" action="mainPage.php" method="post">
+        <form class="form1" method="post">
             <input class="un " type="text" name="name" align="center" placeholder="Username">
             <input class="un " type="text" name="email" align="center" placeholder="Email">
             <input class="pass" type="password" name="password_1" align="center" placeholder="Password">
