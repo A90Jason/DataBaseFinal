@@ -19,6 +19,8 @@
         <input class="un " type="text" align="center" placeholder="Publisher">
         <input class="un " type="text" align="center" placeholder="ISBN">
         <button class="submit" align="center" value="Submit">Submit</button>
+        <p class="link" align="center"><a href="./mainPage.php">Back</p>
+
     </div>
 
 </body>

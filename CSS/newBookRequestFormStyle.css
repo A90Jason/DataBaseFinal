@@ -21,7 +21,7 @@ body {
   .new_book_request_form_box {
     background-color: #ffffff;
     width: 500px;
-    height: 500px;
+    height: 600px;
     margin: 7em auto;
     border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
@@ -86,6 +86,14 @@ body {
     height:auto;
     display:inline-block;
   }
+  .link {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #e1bee7;
+    padding-top: 15px;
+    padding-left: 0px;
+    padding-inline-start: 0%;
+    padding-right: 28px;
+}
 
   @media (max-width: 600px) {
     .main {
