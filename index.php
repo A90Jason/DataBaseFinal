@@ -1,27 +1,53 @@
 <?php
-require_once "api/api.php";
-
-$name = "";
-$email = "";
+require_once "connection.php";
+session_start();
 $errors = array();
-// REGISTER USER
-if (isset($_POST['reg_user'])) {
-    $name = mysqli_real_escape_string($con, $_POST['name']);
-    $email = mysqli_real_escape_string($con, $_POST['email']);
-    $password_1 = mysqli_real_escape_string($con, $_POST['password_1']);
-    $password_2 = mysqli_real_escape_string($con, $_POST['password_2']);
 
-    if ($password_1 != $password_2) {
-        array_push($errors, "The two passwords do not match");
+// Check if new instance of website (create auto-generated super-admin)
+$query = "SELECT * FROM users";
+$result = mysqli_query($con, $query);
+$rowCount = mysqli_num_rows($result);
+if ($rowCount == 0) {
+    // No accounts made, create super-admin
+    $tempPassword = md5('test');
+    $query = "INSERT INTO users (name, email, password, admin) VALUES 
+            ('Super Admin', 'test', '$tempPassword', '1')";
+    mysqli_query($con, $query);
+}
+
+if (isset($_POST['login_user'])) {
+    $email = mysqli_real_escape_string($con, $_POST['email']);
+    $password = mysqli_real_escape_string($con, $_POST['password']);
+
+    if (empty($email)) {
+        array_push($errors, "email is required");
+        // TODO: Derrick - Use CSS to make this error prettier
+        $error = current($errors);
+        echo $error;
+    }
+    if (empty($password)) {
+        array_push($errors, "Password is required");
+        // TODO: Derrick - Use CSS to make this error prettier
+        $error = current($errors);
+        echo $error;
     }
 
-  $query = "INSERT INTO users(name, email, password, admin) 
-        VALUES('$name', '$email', '$password_1', '0')";
-  
-   mysqli_query($con, $query);
-  $_SESSION['email'] = $email;
-
-  header("location: mainPage.php");
+    if (count($errors) == 0) {
+        $password = md5($password);
+        $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+        $results = mysqli_query($con, $query);
+        if (mysqli_num_rows($results) == 1) {
+            $_SESSION['email'] = $email;
+            $_SESSION['success'] = "You are now logged in";
+            header('location: mainPage.php');
+            exit();
+        } else {
+            array_push($errors, "Wrong email/password combination");
+            // TODO: Derrick - Use CSS to make this error prettier
+            $error = current($errors);
+            echo $error;
+        }
+    }
 }
 ?>
 <html>
@@ -31,21 +57,18 @@ if (isset($_POST['reg_user'])) {
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <title>Sign Up</title>
+    <title>Sign in</title>
 </head>
 
 <body>
-    <div class="main">
-        <p class="sign" align="center">Sign Up</p>
+    <div class="login">
+        <p class="sign" align="center">Sign in</p>
         <form class="form1" method="post">
-            <input class="un " type="text" name="name" align="center" placeholder="Username">
             <input class="un " type="text" name="email" align="center" placeholder="Email">
-            <input class="pass" type="password" name="password_1" align="center" placeholder="Password">
-            <input class="pass" type="password" name="password_2" align="center" placeholder="Confirm Password">
-            <button class="submit" align="center" type="submit" name="reg_user">Sign Up</button>
-            <p class="link" align="center"><a href="./forgotPassword.php">Forgot Password?</p>
-            <p class="link" align="center"><a href="./login.php">Login Here</p>
+            <input class="pass" type="password" name="password" align="center" placeholder="Password">
+            <button class="submit" align="center" name="login_user">Sign in</button>
     </div>
+
 </body>
 
 </html>
