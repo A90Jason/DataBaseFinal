@@ -1,4 +1,39 @@
 <?php
+require_once "connection.php";
+session_start();
+$errors = array();
+
+if (isset($_POST['changePassword'])) {
+    $password = mysqli_real_escape_string($con, $_POST['password']);
+    $passwordConfirm = mysqli_real_escape_string($con, $_POST['passwordConfirm']);
+
+    if (empty($password) || empty($passwordConfirm)) {
+        array_push($errors, "password fields are required");
+        $error = current($errors);
+        echo $error;
+    }
+
+    if ($password != $passwordConfirm) {
+        array_push($errors, "password fields must match");
+        $error = current($errors);
+        echo $error;
+    }
+
+    if (count($errors) == 0 && !empty($_SESSION['email'])) {
+        $password = md5($password);
+        $email = $_SESSION['email'];
+        $query = "UPDATE users SET password = '$password' WHERE email = '$email'";
+        $results = mysqli_query($con, $query);
+
+        header("location: mainPage.php");
+    } else if (empty($_SESSION['email'])) {
+        // technically should not ba able to reach this point
+        array_push($errors, "Session variable \"email\" is empty; make sure you're logged in!");
+        $error = current($errors);
+        echo $error;
+    }
+}
+
 ?>
 <html>
 
@@ -13,11 +48,11 @@
 <body>
     <div class="forgotPassword">
         <p class="sign" align="center">Change Password</p>
-        <form class="form1">
-            <input class="un" type="text" name="password" align="center" placeholder="New Password">
-            <input class="un" type="text" name="password" align="center" placeholder="Confirm Password">
-            <button class="passwordButton" align="center">Change Password</button>
-            <p class="link" align="center"><a href="./mainPage.php"">Back</p> 
+        <form class="form1" method="post">
+            <input class="un" type="password" name="password" align="center" placeholder="New Password">
+            <input class="un" type="password" name="passwordConfirm" align="center" placeholder="Confirm Password">
+            <button class="passwordButton" align="center" name="changePassword">Change Password</button>
+            <p class="link" align="center"><a href="./mainPage.php">Back</p> 
     </div>
      
 </body>
