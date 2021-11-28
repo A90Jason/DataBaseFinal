@@ -24,8 +24,8 @@ if (isset($_GET['logout'])) {
 
 <body>
     <div class="mainBox">
-        <p class="sign" align="center">Welcome Professor</p>
-        <p class="sign" align="center">Please choose the following options...</p>
+        <p class="sign" align="center">Welcome</p>
+        <p class="sign" align="center">Please choose from the following options</p>
         <form class="form1" action='newBookRequestForm.php' method="post">
             <button class="mainPageButtons" align="center">New book request form</button>
             <p> </p>
@@ -35,6 +35,7 @@ if (isset($_GET['logout'])) {
             <p> </p>
         </form>
         <p class="link" align="center"><a href="./forgotPassword.php">Change Password</p>
+        <p class="link" align="center"><a href="./signUp.php">Sign up a new user</p>
 
     </div>
     </form>
