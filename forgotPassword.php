@@ -46,7 +46,7 @@ if (isset($_POST['changePassword'])) {
 </head>
 
 <body>
-    <div class="forgotPassword">
+    <div class="changePassword">
         <p class="sign" align="center">Change Password</p>
         <form class="form1" method="post">
             <input class="un" type="password" name="password" align="center" placeholder="New Password">

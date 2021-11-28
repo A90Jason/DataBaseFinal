@@ -50,7 +50,7 @@ if ($routeFlag == 1) {
             <input class="pass" type="password" name="password_1" align="center" placeholder="Password">
             <input class="pass" type="password" name="password_2" align="center" placeholder="Confirm Password">
             <button class="submit" align="center" type="submit" name="reg_user">Sign Up</button>
-            <p class="link" align="center"><a href="./forgotPassword.php">Forgot Password?</p>
+            <p class="link" align="center"><a href="./changePassword.php">Want to change your Password?</p>
             <p class="link" align="center"><a href="./index.php">Have an account? Sign in here!</p>
     </div>
 </body>
