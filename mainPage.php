@@ -34,12 +34,8 @@ if (isset($_GET['logout'])) {
             <button class="mainPageButtons" align="center">View existing request form</button>
             <p> </p>
         </form>
-        <form class="form1" action='addBookRequestForm.php' method="post">
-            <button class="mainPageButtons" align="center">Add book request form</button>
-            <p> </p>
-        </form>
-        <form class="form1" action='deleteBookRequest.php' method="post">
-            <button class="mainPageButtons" align="center">Delete book request</button>
+        <p class="link" align="center"><a href="./forgotPassword.php">Change Password</p>
+
     </div>
     </form>
 </body>

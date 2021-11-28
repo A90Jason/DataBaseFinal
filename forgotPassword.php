@@ -12,11 +12,12 @@
 
 <body>
     <div class="forgotPassword">
-        <p class="sign" align="center">Forgot Password</p>
+        <p class="sign" align="center">Change Password</p>
         <form class="form1">
-            <input class="un" type="text" name="email" align="center" placeholder="Email">
-            <button class="passwordButton" align="center">Reset Password</button>
-            <p class="link" align="center"><a href="./index.php"">Back To Login Page</p> 
+            <input class="un" type="text" name="password" align="center" placeholder="New Password">
+            <input class="un" type="text" name="password" align="center" placeholder="Confirm Password">
+            <button class="passwordButton" align="center">Change Password</button>
+            <p class="link" align="center"><a href="./mainPage.php"">Back</p> 
     </div>
      
 </body>

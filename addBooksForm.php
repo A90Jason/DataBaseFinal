@@ -12,7 +12,7 @@
 
 <body>
     <div class="new_book_request_form_box">
-        <p class="sign" align="center">New Book Request Form</p>
+        <p class="sign" align="center">Add Book Request to Form</p>
         <!-- <form class="form1" action='mainPage.php' metohd="post"> -->
         <input class="un " type="text" align="center" placeholder="Book Title">
         <input class="un " type="text" align="center" placeholder="Author">
