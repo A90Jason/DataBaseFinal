@@ -4,6 +4,7 @@ require_once "connection.php";
 $name = "";
 $email = "";
 $errors = array();
+$routeFlag = 0;
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -16,14 +17,19 @@ if (isset($_POST['reg_user'])) {
         array_push($errors, "The two passwords do not match");
     }
 
+    $password_1 = md5($password_1);
     $query = "INSERT INTO users(name, email, password, admin) 
             VALUES('$name', '$email', '$password_1', '0')";
 
     mysqli_query($con, $query);
     $_SESSION['email'] = $email;
+
+    $routeFlag = 1;
 }
 // Route to login after signing up
-header("location: index.php");
+if ($routeFlag == 1) {
+    header("location: index.php");
+}
 ?>
 <html>
 
@@ -39,7 +45,7 @@ header("location: index.php");
     <div class="main">
         <p class="sign" align="center">Sign Up</p>
         <form class="form1" method="post">
-            <input class="un " type="text" name="name" align="center" placeholder="Username">
+            <input class="un " type="text" name="name" align="center" placeholder="Name">
             <input class="un " type="text" name="email" align="center" placeholder="Email">
             <input class="pass" type="password" name="password_1" align="center" placeholder="Password">
             <input class="pass" type="password" name="password_2" align="center" placeholder="Confirm Password">
