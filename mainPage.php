@@ -34,7 +34,7 @@ if (isset($_GET['logout'])) {
             <button class="mainPageButtons" align="center">View existing request form</button>
             <p> </p>
         </form>
-        <p class="link" align="center"><a href="./changePassword.php">Change Password</p>
+        <p class="link" align="center"><a href="./changePassword.php">Want to change your Password?</p>
         <p class="link" align="center"><a href="./signUp.php">Sign up a new user</p>
 
     </div>
