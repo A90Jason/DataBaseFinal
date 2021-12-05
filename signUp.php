@@ -5,6 +5,7 @@ $name = "";
 $email = "";
 $errors = array();
 $routeFlag = 0;
+$isProfessor = 0;
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -13,13 +14,17 @@ if (isset($_POST['reg_user'])) {
     $password_1 = mysqli_real_escape_string($con, $_POST['password_1']);
     $password_2 = mysqli_real_escape_string($con, $_POST['password_2']);
 
+    if ($_POST['professorChoice'] == 'Professor') {
+        $isProfessor = 1;
+    }
+
     if ($password_1 != $password_2) {
         array_push($errors, "The two passwords do not match");
     }
 
     $password_1 = md5($password_1);
-    $query = "INSERT INTO users(name, email, password, admin) 
-            VALUES('$name', '$email', '$password_1', '0')";
+    $query = "INSERT INTO users(name, email, password, admin, isProfessor) 
+            VALUES('$name', '$email', '$password_1', '0', '$isProfessor')";
 
     mysqli_query($con, $query);
     $_SESSION['email'] = $email;
@@ -49,6 +54,13 @@ if ($routeFlag == 1) {
             <input class="un " type="text" name="email" align="center" placeholder="Email">
             <input class="pass" type="password" name="password_1" align="center" placeholder="Password">
             <input class="pass" type="password" name="password_2" align="center" placeholder="Confirm Password">
+            </br>
+            <input type="radio" id="staff" name="professorChoice" value="Staff" checked>
+            <label for="staff">Staff</label>
+            <input type="radio" id="professor" name="professorChoice" value="Professor">
+            <label for="professor">Professor</label>
+            </br>
+            </br>
             <button class="submit" align="center" type="submit" name="reg_user">Sign Up</button>
             <p class="link" align="center"><a href="./index.php">Have an account? Sign in here!</p>
     </div>
