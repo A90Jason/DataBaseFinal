@@ -13,12 +13,18 @@
 <body>
     <div class="login1">
         <p class="sign" align="center">Existing Request Form Page</p>
-        <form class="form1" method="post">
-            <input class="un" type="text" placeholder="Book Title" />
-            <button class="submit1" value="Submit">Add Book(s)</button><p><p>
-            <button class="submit1" action="addBooksForm.php" value="Submit">Delete Book(s)</button><p><p>
-            <button class="submit1" value="Submit">Delete Request Form</button>
-        </form>
+            <form class="form1" action='addBooksForm.php' method="post">
+                <button class="submit1" value="Submit">Add Book(s)</button>
+                <p><p>
+            </form>
+            <form class="form1" action='deleteBooksForm.php' method="post">
+                <button class="submit1" value="Submit">Delete Book(s)</button>
+                <p><p>
+            </form>
+            <form class="form1" action='deleteRequestForm.php' method="post">
+                <button class="submit1" value="Submit">Delete Request Form</button>
+                <p><p>
+            </form>
         <p class="link" align="center"><a href="./mainPage.php">Back</p>
     </div>
 
