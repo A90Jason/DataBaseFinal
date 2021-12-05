@@ -10,8 +10,8 @@ $rowCount = mysqli_num_rows($result);
 if ($rowCount == 0) {
     // No accounts made, create super-admin
     $tempPassword = md5('test');
-    $query = "INSERT INTO users (name, email, password, admin) VALUES 
-            ('Super Admin', 'test', '$tempPassword', '1')";
+    $query = "INSERT INTO users (name, email, password, admin, isProfessor) VALUES 
+            ('Super Admin', 'test', '$tempPassword', '1', '0')";
     mysqli_query($con, $query);
 }
 
