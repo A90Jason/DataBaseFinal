@@ -20,12 +20,12 @@ if (isset($_GET['logout'])) {
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <title>Main Page</title>
+    <title>Professor Page</title>
 </head>
 
 <body>
     <div class="mainBox">
-        <p class="sign" align="center">Welcome</p>
+        <p class="sign" align="center">Welcome Professor</p>
         <p class="sign" align="center">Please choose from the following options</p>
         <form class="form1" action='newBookRequestForm.php' method="post">
             <button class="mainPageButtons" align="center">New book request form</button>
@@ -36,8 +36,6 @@ if (isset($_GET['logout'])) {
             <p> </p>
         </form>
         <p class="link" align="center"><a href="./changePassword.php">Want to change your Password?</p>
-        <p class="link" align="center"><a href="./signUp.php">Sign up a new user</p>
-
     </div>
     </form>
 </body>
