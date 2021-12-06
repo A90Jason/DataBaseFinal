@@ -27,13 +27,9 @@ if (isset($_POST['add_book'])) {
 
 <body>
     <div class="new_book_request_form_box">
-        <p class="sign" align="center">Add Book Request to Form</p>
+        <p class="sign" align="center">Delete Request Form</p>
         <form class="form1" method="post">
-        <input class="un " type="text" name="bookTitle" align="center" placeholder="Book Title">
-        <input class="un " type="text" name="author" align="center" placeholder="Author">
-        <input class="un " type="text" name="edition" align="center" placeholder="Edition">
-        <input class="un " type="text" name="publisher" align="center" placeholder="Publisher">
-        <input class="un " type="text" name="isbn" align="center" placeholder="ISBN">
+        <input class="un " type="text" name="bookTitle" align="center" placeholder="Request Form">
         <button class="submit" align="center" name="add_book">Submit</button>
         <p class="link" align="center"><a href="./mainPage.php">Back</p>
         </form>
