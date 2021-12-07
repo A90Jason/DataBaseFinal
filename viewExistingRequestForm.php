@@ -24,60 +24,13 @@
                 <p><p>
             </form>
             <p class="link" align="center"><a href="./mainPage.php">Back</p></a>
-          </form>
-      </div>
+    </div>
 
         <h1 class= "table-header" align="center"> List of Books </h1>
-        <table class="content-table">
-            <thead>
-                <tr>
-                    <th>Book Title</th>
-                    <th>Author Name</th>
-                    <th>Edition</th>
-                    <th>Publisher</th>
-                    <th>ISBN</th>
-                    <th>UserID</th>
-                    <th>BookId</th>
-                </tr>
-            </thead>
-            
-            <?php
+            <p class="link" align="center"><a href="./fallBooks.php">Fall Books</p>
+            <p class="link" align="center"><a href="./springBooks.php">Spring Books</p>
+            <p class="link" align="center"><a href="./summerBooks.php">Summer Books</p>
 
-                require_once "connection.php";
-        
-                $sql = "SELECT * FROM books";
-                $result = $con-> query($sql);
-
-                if ($result-> num_rows)
-                {
-                
-                    while($row = mysqli_fetch_array($result))
-                    {
-                        echo "<tr>";
-                        echo "<td>" . $row['bookTitle'] . "</td>";
-                        echo "<td>" . $row['authorsName'] . "</td>";
-                        echo "<td>" . $row['edition'] . "</td>";
-                        echo "<td>" . $row['publisher'] . "</td>";
-                        echo "<td>" . $row['isbn'] . "</td>";
-                        echo "<td>" . $row['userID'] . "</td>";
-                        echo "<td>" . $row['bookID'] . "</td>";
-                    }
-
-
-                    echo "</table";
-                }
-                else
-                {
-                    echo "0 results";
-                }
-
-                $con-> close();
-
-
-                ?>
-
-        
-</table>
 
 </body>
 
