@@ -28,7 +28,15 @@ if (isset($_GET['logout'])) {
         <p class="sign" align="center">Welcome Professor</p>
         <p class="sign" align="center">Please choose from the following options</p>
         <form class="form1" action='newBookRequestForm.php' method="post">
-            <button class="mainPageButtons" align="center">New book request form</button>
+            <button class="mainPageButtons" align="center">Fall book request form</button>
+            <p> </p>
+        </form>
+        <form class="form1" action='newBookRequestForm.php' method="post">
+            <button class="mainPageButtons" align="center">Spring book request form</button>
+            <p> </p>
+        </form>
+        <form class="form1" action='newBookRequestForm.php' method="post">
+            <button class="mainPageButtons" align="center">Summer book request form</button>
             <p> </p>
         </form>
         <form class="form1" action='viewExistingRequestForm.php' method="post">
