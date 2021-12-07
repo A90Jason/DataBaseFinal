@@ -63,6 +63,8 @@ if ($routeFlag == 1) {
             </br>
             <button class="submit" align="center" type="submit" name="reg_user">Sign Up</button>
             <p class="link" align="center"><a href="./index.php">Have an account? Sign in here!</p>
+            <p class="link" align="center"><a href="./mainPage.php">Back</p>
+
     </div>
 </body>
 
