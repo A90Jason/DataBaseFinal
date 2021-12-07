@@ -55,7 +55,7 @@
                     {
                         echo "<tr>";
                         echo "<td>" . $row['bookTitle'] . "</td>";
-                        echo "<td>" . $row['authorName'] . "</td>";
+                        echo "<td>" . $row['authorsName'] . "</td>";
                         echo "<td>" . $row['edition'] . "</td>";
                         echo "<td>" . $row['publisher'] . "</td>";
                         echo "<td>" . $row['isbn'] . "</td>";
