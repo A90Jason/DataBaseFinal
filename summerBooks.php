@@ -9,7 +9,7 @@
 </head>
 
 <body><h1 class= "table-header" align="center"> List of Summer Books </h1>
-            <p class="link" align="center"><a href="./mainPage.php">Back</p>
+        <p class="link" align="center"><a href="./viewExistingRequestForm.php">Back</p>
         <table class="content-table">
             <thead>
                 <tr>
